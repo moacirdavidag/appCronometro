@@ -18,6 +18,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -66,7 +67,7 @@ body {
     top: 10px;
 }
 
-#interface #botoes {
+#interface .botoes {
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -74,20 +75,20 @@ body {
     margin-top: 40px;
 }
 
-#botoes i {
+.botoes i {
     cursor: pointer;
 }
 
-#botoes i:hover {
+.botoes i:hover {
     color: #ce6324;
 }
 
-#botoes #pausar {
+.botoes #pausar {
     display: none;
     animation: aparecer 0.3s ease-in-out;
 } 
 
-#botoes #parar {
+.botoes #parar {
     display: none;
     animation: aparecer 0.3s ease-in-out;
 }
@@ -101,4 +102,72 @@ body {
     100% {
         opacity: 100%;
     }
+}
+
+#botoesApp {
+    width: 480px;
+    height: 60px;
+    background: #221b41;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 1px 5px #221b4179, 0px 2px 2px #221b4179;
+}
+
+#botoesApp i {
+    cursor: pointer;
+}
+
+#botoesApp i:hover {
+    color: #ce6324;
+}
+
+#infoHora {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#relogio {
+    display: none;
+}
+
+#temporizador {
+    display: none;
+}
+
+#temporizador #valores {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#valores {
+    font-size: 2em;
+}
+
+#valores input {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    border: none;
+    background: #0e0922;
+    color: #d3d0df;
+    font-size: 50px;
+    text-align: center;
+}
+
+#temporizador #info {
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+#temporizador .botoes {
+    margin-top: 10px;
 }

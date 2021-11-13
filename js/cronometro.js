@@ -5,13 +5,17 @@ var seg = document.querySelector("#seg");
 var ms = document.querySelector("#ms");
 var iniciar = document.querySelector("#iniciar");
 var pausar = document.querySelector("#pausar");
-
-let cronometro;
+var abrirCronometro = document.querySelector("#abrirCronometro");
+var cronometroInterface = document.querySelector("#cronometro");
+var interfaceTemporizador = document.getElementById("temporizador");
+var interfaceRelogio = document.querySelector("#relogio");
 
 
 iniciar.addEventListener("click", iniciarCronometro);
 pausar.addEventListener("click", pausarCronometro);
 parar.addEventListener("click", pararCronometro);
+
+abrirCronometro.addEventListener("click", mostrarInterface);
 
 
 
@@ -39,7 +43,6 @@ function iniciarCronometro() {
             }
         }
         
-        //ms.innerHTML = `${milissegundo}`;
         if(segundo < 10) {
             seg.innerHTML = `0${segundo}`;
         } else {
@@ -76,4 +79,12 @@ function pararCronometro() {
     min.innerHTML = "00"; 
     seg.innerHTML = "00"; 
     ms.innerHTML = "00";   
+}
+
+function mostrarInterface() {
+    if(this.id == "abrirCronometro") {
+        cronometroInterface.style.display = "block";
+        interfaceTemporizador.style.display = "none";
+        interfaceRelogio.style.display = "none";
+    } 
 }

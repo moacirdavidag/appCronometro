@@ -11,15 +11,50 @@
 <body>
     <div class="container">
         <div id="interface">
-            <div id="titulo"><i class="fas fa-stopwatch"></i>Cronômetro</div>
-            <div id="numeros"><span id="hr">00</span>:<span id="min">00</span>:<span id="seg">00</span><span id="ms">00</span></div>
-            <div id="botoes">
-                <i class="fas fa-play" id="iniciar"></i>
-                <i class="fas fa-pause" id="pausar"></i>
-                <i class="fas fa-redo" id="parar"></i>
+            
+            <div id="cronometro">
+                <div id="titulo"><i class="fas fa-stopwatch"></i>Cronômetro</div>
+                <div id="numeros"><span id="hr">00</span>:<span id="min">00</span>:<span id="seg">00</span><span id="ms">00</span></div>
+                <div class="botoes">
+                    <i class="fas fa-play" id="iniciar"></i>
+                    <i class="fas fa-pause" id="pausar"></i>
+                    <i class="fas fa-redo" id="parar"></i>
+                </div>
             </div>
+            
+            <div id="relogio">
+                <div id="titulo"><i class="fas fa-clock"></i>Relógio</div>
+                <div id="numeros"><span id="horaRelogio"></span></div>
+                <div><p id="infoHora">GMT -3 Brasília </p></div>
+            </div>
+
+
+            <div id="temporizador">
+                <div id="titulo"><i class="fas fa-stopwatch-20"></i>Temporizador</div>
+                <div id="valores">
+                    <input type="number" id="valorHora" value="0">:
+                    <input type="number" id="valorMinuto" value="0">:
+                    <input type="number" id="valorSegundo" value="0">
+                </div>
+                <p id="info">Hora (s) : Minuto (s) : Segundo (s)</p>
+                <div class="botoes">
+                    <i class="fas fa-play"></i>
+                    <i class="fas fa-pause"></i>
+                    <i class="fas fa-redo"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="botoesApp">
+            <i class="fas fa-clock" id="abrirRelogio"></i>
+            <i class="fas fa-stopwatch" id="abrirCronometro"></i>
+            <i class="fas fa-stopwatch-20" id="abrirTemporizador"></i>
+
         </div>
     </div>
-    <script src="/js/main.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/relogio.js"></script>
+    <script src="js/temporizador.js"></script>
 </body>
 </html>
