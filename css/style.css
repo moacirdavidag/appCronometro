@@ -94,6 +94,17 @@ body {
 }
 
 
+.botoes #pausarTemporizador {
+    display: none;
+    animation: aparecer 0.3s ease-in-out;
+} 
+
+.botoes #pararTemporizador {
+    display: none;
+    animation: aparecer 0.3s ease-in-out;
+}
+
+
 @keyframes aparecer {
     0% {
         opacity: 0;
