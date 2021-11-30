@@ -7,7 +7,6 @@ var iniciar = document.querySelector("#iniciar");
 var pausar = document.querySelector("#pausar");
 var abrirCronometro = document.querySelector("#abrirCronometro");
 var cronometroInterface = document.querySelector("#cronometro");
-var interfaceTemporizador = document.getElementById("temporizador");
 var interfaceRelogio = document.querySelector("#relogio");
 
 
@@ -24,12 +23,12 @@ function iniciarCronometro() {
     parar.style.display = "block";
 
     cronMs = setInterval(() => {
-        milissegundo += 10;
+        milissegundo += 100;
         if(milissegundo == 1000) {
             milissegundo = 0;
         }
         ms.innerHTML = `${(milissegundo/10).toFixed(0)}`;
-    }, 10) 
+    }, 100) 
 
     cronometro = setInterval(() => {
         
@@ -84,7 +83,6 @@ function pararCronometro() {
 function mostrarInterface() {
     if(this.id == "abrirCronometro") {
         cronometroInterface.style.display = "block";
-        interfaceTemporizador.style.display = "none";
         interfaceRelogio.style.display = "none";
     } 
 }

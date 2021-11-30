@@ -2,7 +2,6 @@ var abrirRelogio = document.querySelector("#abrirRelogio");
 var horaRelogio = document.querySelector("#horaRelogio");
 var interfaceRelogio = document.querySelector("#relogio");
 var infoHora = document.getElementById("infoHora");
-var interfaceTemporizador = document.getElementById("temporizador");
 var cronometroInterface = document.querySelector("#cronometro");
 var interfaceRelogio = document.querySelector("#relogio");
 
@@ -19,7 +18,6 @@ function mostrarHora() {
 function mostrarInterface() {
      if(this.id == "abrirRelogio") {
         cronometroInterface.style.display = "none";
-        interfaceTemporizador.style.display = "none";
         interfaceRelogio.style.display = "block";
     }
 }
